@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ewelina (Evie) Dytrych - PhD Student</title>
+    <title>Ewelina Dytrych - PhD Student</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -13,46 +13,59 @@
             background-repeat: repeat;
             background-size: 400px;
         }
+        
         h1, h2, h3, h4, h5, h6, nav {
             font-family: 'Inter', sans-serif;
         }
 
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
         @media (max-width: 768px) {
-            nav {
-                position: relative; 
+            #mobile-menu.show {
+                display: block;
             }
         }
     </style>
 </head>
 <body class="bg-[#0E0F20] text-gray-100">
-
     <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1E2749] bg-opacity-95 shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left section: ED and Logo -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-3xl font-semibold text-[#7BA793]">ED</a>
+                    <a href="https://www.stir.ac.uk/">
+                        <img src="stirlinglogowhite.png" alt="Stirling Logo" class="h-auto w-auto max-h-[2.5em]">
+                    </a>
+                </div>
 
-<nav class="fixed w-full bg-[#1E2749] bg-opacity-95 shadow-lg z-50">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-
-            <!-- Left section: ED and Logo -->
-
-            <div class="flex items-center space-x-4">
-
-                <!-- "ED" Text -->
-
-                <a href="#" class="text-3xl font-semibold text-[#7BA793]">ED</a>
-
-                <!-- Stirling Logo Image -->
-
-                <a href="https://www.stir.ac.uk/">
-                    <img src="stirlinglogowhite.png" alt="Stirling Logo" class="h-auto w-auto max-h-[2.5em]">
-                </a>
-            </div>
-
-                <div class="flex space-x-8">
+                <!-- Navigation links -->
+                <div class="hidden md:flex md:items-center md:space-x-8" id="nav-links">
                     <a href="#about" class="hover:text-[#7BA793] transition-colors">About</a>
                     <a href="#research" class="hover:text-[#7BA793] transition-colors">Research</a>
                     <a href="#publications" class="hover:text-[#7BA793] transition-colors">Publications</a>
                     <a href="#contact" class="hover:text-[#7BA793] transition-colors">Contact</a>
                 </div>
+
+                <!-- Hamburger button -->
+                <button id="hamburger" class="md:hidden focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-[#1E2749]">
+                <a href="#about" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">About</a>
+                <a href="#research" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Research</a>
+                <a href="#publications" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Publications</a>
+                <a href="#contact" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -79,17 +92,15 @@
     </section>
 
     <!-- Research Section -->
-
     <section id="research" class="py-20" style="background-image: url('twinkle_twinkle.jpg'); background-repeat: repeat; background-size: 400px;">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Research Focus</h2>
             <div class="grid md:grid-cols-2 gap-8">
-
                 <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
                     <h3 class="text-xl font-semibold mb-4">
                         <a href="#systematic-review" class="text-[#D49493] hover:text-[#7BA793] transition-colors">〉Systematic Review</a>
                     </h3>
-                    <p>Lorem ipsum dolor amet pre turbo lament lorem de ixum puppet whatever. Lorem ipsum dolor ametyloks iksem zapis papu dupa.</p>
+                    <p>Comprehensive analysis of existing social anxiety apps to identify effective features and areas for improvement.</p>
                 </div>
 
                 <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
@@ -110,15 +121,13 @@
                     <h3 class="text-xl font-semibold mb-4">
                         <a href="#intervention-evaluation" class="text-[#D49493] hover:text-[#7BA793] transition-colors">〉Intervention Evaluation</a>
                     </h3>
-                    <p>Developing a gamified mobile application that combines therapeutic approaches with engaging design.</p>
+                    <p>Testing and refining the application through user feedback and empirical evaluation.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
-
     <section id="publications" class="py-20 bg-[#1E2749]">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Publications</h2>
@@ -132,17 +141,14 @@
     </section>
 
     <!-- Contact Section -->
-
     <section id="contact" class="py-20" style="background-image: url('twinkle_twinkle.jpg'); background-repeat: repeat; background-size: 400px;">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">Contact</h2>
             <p class="mb-4">Get in touch about research collaborations or inquiries:</p>
             <a href="mailto:ead4@stir.ac.uk" class="text-[#D49493] hover:text-[#7BA793] transition-colors block">ead4@stir.ac.uk</a><br>
             <a href="https://www.linkedin.com/in/ewelinadytrych" class="inline-flex items-center">
-                <img src="linkedin.png" alt="LinkedIn Profile" 
-                class="w-8 h-8 transition-transform hover:scale-120"> 
-              </a>
-              
+                <img src="linkedin.png" alt="LinkedIn Profile" class="w-8 h-8 transition-transform hover:scale-110"> 
+            </a>
         </div>
     </section>
 
@@ -152,5 +158,34 @@
             <p class="text-sm text-[#D5C5A0]">&copy; 2024 Ewelina Dytrych. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.getElementsByTagName('a');
+            for (const link of mobileLinks) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('show');
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
