@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systematic Review - Ewelina Dytrych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-image: url('graphics/twinkle_twinkle.jpg');
+            font-display: swap;
+            background-repeat: repeat;
+            background-size: 400px;
+        }
+        
+        h1, h2, h3, h4, h5, h6, nav {
+            font-family: 'Inter', sans-serif;
+        }
+
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            #mobile-menu.show {
+                display: block;
+            }
+        }
+
+        .circular-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #7BA793;
+            background-color: #1E2749;
+            background-color: rgba(30, 39, 73, 0.5);
+        }
+
+        .circular-image img {
+            max-width: 70%;
+            max-height: 70%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-[#0E0F20] text-gray-100">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1E2749] bg-opacity-95 shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left section: ED and Logo -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-3xl font-semibold text-[#7BA793]">ED</a>
+                    <a href="https://www.stir.ac.uk/">
+                        <img src="graphics/stirlinglogowhite.png" alt="Stirling Logo" class="h-auto w-auto max-h-[2.5em]">
+                    </a>
+                </div>
+
+                <!-- Navigation links -->
+                <div class="hidden md:flex md:items-center md:space-x-8" id="nav-links">
+                    <a href="index.html#about" class="hover:text-[#7BA793] transition-colors">About</a>
+                    <a href="index.html#research" class="hover:text-[#7BA793] transition-colors">Research</a>
+                    <a href="index.html#publications" class="hover:text-[#7BA793] transition-colors">Publications</a>
+                    <a href="index.html#contact" class="hover:text-[#7BA793] transition-colors">Contact</a>
+                </div>
+
+                <!-- Hamburger button -->
+                <button id="hamburger" class="md:hidden focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-[#1E2749]">
+                <a href="index.html#about" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">About</a>
+                <a href="index.html#research" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Research</a>
+                <a href="index.html#publications" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Publications</a>
+                <a href="index.html#contact" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center content-overlay">
+            <div class="circular-image mb-8 mx-auto">
+                <img src="graphics/systematicreview.png" alt="Systematic Review Illustration">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-[#D5C5A0]">Systematic Review</h1>
+            <p class="text-xl md:text-2xl text-[#D49493] mb-8">Mapping the Landscape of Social Anxiety Mobile Apps</p>
+        </div>
+    </header>
+
+    <!-- Review Overview Section -->
+    <section class="py-20 bg-[#1E2749]">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Review Objectives</h2>
+            <div class="space-y-6 text-gray-300">
+                <p>This systematic review aims to comprehensively analyze existing mobile applications designed for social anxiety management. By examining the current digital landscape, we seek to:</p>
+                <ul class="list-disc pl-8 space-y-4">
+                    <li>Identify and evaluate the characteristics of existing social anxiety mobile apps</li>
+                    <li>Assess the quality, effectiveness, and evidence base of current interventions</li>
+                    <li>Identify gaps in existing digital mental health solutions for social anxiety</li>
+                    <li>Provide insights to inform the development of more effective, user-centered apps</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="py-20" style="background-image: url('graphics/twinkle_twinkle.jpg'); background-repeat: repeat; background-size: 400px;">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Methodology</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
+                    <h3 class="text-xl font-semibold mb-4 text-[#D49493]">〉Search Strategy</h3>
+                    <p>Comprehensive search across multiple databases and app stores, including PubMed, PsycINFO, Google Play, and Apple App Store.</p>
+                </div>
+
+                <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
+                    <h3 class="text-xl font-semibold mb-4 text-[#D49493]">〉Evaluation Frameworks</h3>
+                    <p>Utilizing Mobile App Rating Scale (MARS) and behavior change technique taxonomy for rigorous assessment.</p>
+                </div>
+
+                <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
+                    <h3 class="text-xl font-semibold mb-4 text-[#D49493]">〉Inclusion Criteria</h3>
+                    <p>Mobile applications targeting social anxiety in young adults, with evidence-based content and therapeutic components.</p>
+                </div>
+
+                <div class="bg-[#1E2749] p-6 rounded-lg border-l-4 border-[#7BA793]">
+                    <h3 class="text-xl font-semibold mb-4 text-[#D49493]">〉Analysis Approach</h3>
+                    <p>Mixed-methods systematic review combining quantitative and qualitative analysis of app features and user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Outcomes Section -->
+    <section class="py-20 bg-[#1E2749]">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Expected Outcomes</h2>
+            <div class="space-y-6 text-gray-300">
+                <p>This systematic review will provide a comprehensive understanding of the current state of mobile applications for social anxiety management. Key anticipated outcomes include:</p>
+                <ul class="list-disc pl-8 space-y-4">
+                    <li>Detailed mapping of existing digital interventions</li>
+                    <li>Critical analysis of app design, features, and therapeutic approaches</li>
+                    <li>Identification of best practices and critical gaps in current solutions</li>
+                    <li>Recommendations for future app development and research</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<!-- References Section -->
+<section class="py-20" style="background-image: url('graphics/twinkle_twinkle.jpg'); background-repeat: repeat; background-size: 400px;">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》References</h2>
+        <div class="text-gray-300 space-y-6">
+            <p class="text-sm leading-relaxed">
+                Alyami, M., Giri, B., Alyami, H., & Sundram, F. (2017). Social anxiety apps: A systematic review and assessment of app descriptors across mobile store platforms. <em>Evidence-Based Mental Health</em>, <em>20</em>(3), 65-70. <a href="https://doi.org/10.1136/eb-2017-102664" class="hover:text-[#7BA793] transition-colors">https://doi.org/10.1136/eb-2017-102664</a>
+            </p>
+            <p class="text-sm leading-relaxed">
+                Hammond, T. E., Lampe, L., Campbell, A., Perisic, S., & Brakoulias, V. (2021). Psychoeducational Social Anxiety Mobile Apps: Systematic Search in App Stores, Content Analysis, and Evaluation. <em>JMIR mHealth and uHealth</em>, <em>9</em>(9), e26603. <a href="https://doi.org/10.2196/26603" class="hover:text-[#7BA793] transition-colors">https://doi.org/10.2196/26603</a>
+            </p>
+            <p class="text-sm leading-relaxed">
+                Stoyanov, S. R., Hides, L., Kavanagh, D. J., Zelenko, O., Tjondronegoro, D., & Mani, M. (2015). Mobile App Rating Scale: A New Tool for Assessing the Quality of Health Mobile Apps. <em>JMIR mHealth and uHealth</em>, <em>3</em>(1), e27. https://doi.org/10.2196/mhealth.3422
+            </p>
+            <p class="text-sm leading-relaxed">
+                Cheng, V. W. S., Davenport, T., Johnson, D., Vella, K., & Hickie, I. B. (2019). Gamification in Apps and Technologies for Improving Mental Health and Well-Being: Systematic Review. <em>JMIR Mental Health</em>, <em>6</em>(6), e13717. https://doi.org/10.2196/13717
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[#0E0F20] border-t border-[#1E2749]">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-sm text-[#FFFFFF]">&copy; 2024 Ewelina Dytrych. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.getElementsByTagName('a');
+            for (const link of mobileLinks) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('show');
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

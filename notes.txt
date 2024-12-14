@@ -1,1 +1,7 @@
+CSS
+
 https://tailwindcss.com/blog/standalone-cli
+
+Icons
+
+https://www.flaticon.com/authors/monkik
