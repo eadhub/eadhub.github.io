@@ -14,32 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;700&display=block" rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    <link href="output.css" rel="stylesheet">
-
+    <link href="css/output.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
     
-    <style>
-
-        body {
-            font-family: 'Fira Code', monospace;
-            background-image: url('graphics/twinkle_twinkle.jpg');
-            background-repeat: repeat;
-            background-size: 400px;
-        }
-        
-        h1, h2, h3, h4, h5, h6, nav {
-            font-family: 'Inter', sans-serif;
-        }
-
-        #mobile-menu {
-            transition: all 0.3s ease-in-out;
-        }
-
-        @media (max-width: 768px) {
-            #mobile-menu.show {
-                display: block;
-            }
-        }
-    </style>
 </head>
 <body class="bg-[#0E0F20] text-gray-100">
 
@@ -49,7 +27,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Left section: ED and Logo -->
                 <div class="flex items-center space-x-4">
-                    <a href="#" class="text-3xl font-semibold text-[#7BA793]">ED</a>
+                    <a href="index.html" class="text-3xl font-semibold text-[#7BA793]">ED</a>
                     <a href="https://www.stir.ac.uk/">
                         <img src="graphics/stirlinglogowhite.png" alt="Stirling Logo" class="h-auto w-auto max-h-[2.5em]">
                     </a>
@@ -59,6 +37,7 @@
                 <div class="hidden md:flex md:items-center md:space-x-8" id="nav-links">
                     <a href="#about" class="hover:text-[#7BA793] transition-colors">About</a>
                     <a href="#research" class="hover:text-[#7BA793] transition-colors">Research</a>
+                    <a href="#roadmap" class="hover:text-[#7BA793] transition-colors">Roadmap</a>
                     <a href="#publications" class="hover:text-[#7BA793] transition-colors">Publications</a>
                     <a href="#contact" class="hover:text-[#7BA793] transition-colors">Contact</a>
                 </div>
@@ -77,6 +56,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 bg-[#1E2749]">
                 <a href="#about" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">About</a>
                 <a href="#research" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Research</a>
+                <a href="#roadmap" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Roadmap</a>
                 <a href="#publications" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Publications</a>
                 <a href="#contact" class="block px-3 py-2 hover:text-[#7BA793] transition-colors">Contact</a>
             </div>
@@ -140,6 +120,82 @@
         </div>
     </section>
 
+  <!-- Roadmap -->
+<section id="roadmap" class="py-20 bg-[#1E2749]">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-[#D5C5A0]">》Roadmap</h2>
+        
+        <div class="roadmap-container bg-[#0E0F20] p-6 rounded-lg border-l-4 border-[#7BA793] shadow-lg">
+            
+		<!-- Slider container -->
+      <div class="slider-container relative mb-8">
+    <!-- Marker lines -->
+    <div class="timeline-markers">
+        <div class="timeline-marker"></div>
+        <div class="timeline-marker"></div>
+        <div class="timeline-marker"></div>
+    </div>
+    
+    <input 
+        type="range" 
+        min="0" 
+        max="2" 
+        value="0" 
+        step="0.01"
+        class="timeline-slider"
+        id="timeline-slider"
+    >
+    
+    <div class="timeline-dots flex justify-between px-3 mt-4">
+        <div class="timeline-dot w-3 h-3 bg-[#1E2749] border-2 border-[#7BA793] rounded-full"></div>
+        <div class="timeline-dot w-3 h-3 bg-[#1E2749] border-2 border-[#7BA793] rounded-full"></div>
+        <div class="timeline-dot w-3 h-3 bg-[#1E2749] border-2 border-[#7BA793] rounded-full"></div>
+    </div>
+</div>
+
+            <!-- Slides -->
+            <div class="roadmap-slides">
+                <div class="roadmap-slide active">
+                    <h3 class="text-xl font-semibold text-[#D5C5A0] mb-2">Year 1: Foundation</h3>
+                    <p class="text-[#D49493] text-sm mb-4">October 2024 - September 2025</p>
+                    <ul class="space-y-2">
+                        <li class="text-gray-200">〉 Systematic review of social anxiety apps</li>
+                        <li class="text-gray-200">〉 Learning FlutterFlow and Dart</li>
+                        <li class="text-gray-200">〉 Stakeholder engagement planning and ethics</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-slide">
+                    <h3 class="text-xl font-semibold text-[#D5C5A0] mb-2">Year 2: Development</h3>
+                    <p class="text-[#D49493] text-sm mb-4">October 2025 - September 2026</p>
+                    <ul class="space-y-2">
+                        <li class="text-gray-200">〉 Stakeholder interviews & analysis</li>
+                        <li class="text-gray-200">〉 App prototype development</li>
+                        <li class="text-gray-200">〉 Ethics application for testing</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-slide">
+                    <h3 class="text-xl font-semibold text-[#D5C5A0] mb-2">Year 3: Evaluation</h3>
+                    <p class="text-[#D49493] text-sm mb-4">October 2026 - September 2027</p>
+                    <ul class="space-y-2">
+                        <li class="text-gray-200">〉 App testing with young adults</li>
+                        <li class="text-gray-200">〉 Mixed methods evaluation</li>
+                        <li class="text-gray-200">〉 Thesis writing and submission</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Separator -->
+       <section id="separator" class="py-8 border-t border-[#1E2749]" style="background-image: url('graphics/twinkle_twinkle.jpg'); background-repeat: repeat; background-size: 400px;">
+        <div class="max-w-4xl mx-auto px-4 text-center"></div>
+    </section>
+    
+
     <!-- Publications Section -->
     <section id="publications" class="py-20 bg-[#1E2749]">
         <div class="max-w-4xl mx-auto px-4">
@@ -172,33 +228,8 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const mobileMenu = document.getElementById('mobile-menu');
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 
-            hamburger.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('show');
-            });
-
-            // Close mobile menu when clicking a link
-            const mobileLinks = mobileMenu.getElementsByTagName('a');
-            for (const link of mobileLinks) {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('show');
-                });
-            }
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('show');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

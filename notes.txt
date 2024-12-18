@@ -2,6 +2,21 @@ CSS
 
 https://tailwindcss.com/blog/standalone-cli
 
+# Terminal
+
+# Create a tailwind.config.js file
+./tailwindcss init
+
+# Start a watcher
+./tailwindcss -i css/input.css -o css/output.css --watch
+
+# Compile and minify your CSS for production
+./tailwindcss -i css/input.css -o css/output.css --minify
+
 Icons
 
 https://www.flaticon.com/authors/monkik
+
+Font Loading
+
+https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/

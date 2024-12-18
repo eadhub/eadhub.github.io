@@ -1,0 +1,119 @@
+body {
+    font-family: 'Fira Code', monospace;
+    background-image: url('graphics/twinkle_twinkle.jpg');
+    background-repeat: repeat;
+    background-size: 400px;
+}
+
+h1, h2, h3, h4, h5, h6, nav {
+    font-family: 'Inter', sans-serif;
+}
+
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    #mobile-menu.show {
+        display: block;
+    }
+}
+
+
+.roadmap-container {
+position: relative;
+}
+
+/* Timeline slider styling */
+
+/* Slider styling */
+
+.slider-container {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.timeline-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #4A5568;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+}
+
+.timeline-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1E2749;
+    border: 4px solid #7BA793;
+    cursor: pointer;
+    margin-top: 0px; /* Center on track */
+    position: relative;
+    z-index: 6;
+}
+
+.timeline-slider::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #7BA793;
+    border: 4px solid #1E2749;
+    cursor: pointer;
+    position: relative;
+    z-index: 6;
+}
+
+/* Dots styling */
+.timeline-dots {
+    margin-top: 0.5rem;
+    
+}
+
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.timeline-dot.active {
+    background: #7BA793 !important;
+}
+
+/* Slides styling */
+.roadmap-slides {
+    margin-top: 2rem;
+}
+
+.roadmap-slide {
+    display: none;
+}
+
+.roadmap-slide.active {
+    display: block;
+}
+
+/* Marker lines */
+
+.timeline-markers {
+    position: absolute;
+    width: 100%;
+    height: 16px; /* Same as slider track height */
+    pointer-events: none;
+    z-index: 5;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 4px;
+    height: 16px; /* Slightly taller than the track */
+    background: #7BA793;
+    top: 5px; /* Offset to center on track */
+}
+
+/* Position markers */
+.timeline-marker:nth-child(1) { left: 0; }
+.timeline-marker:nth-child(2) { left: 50%; }
+.timeline-marker:nth-child(3) { left: calc(100% - 2px); }
