@@ -68,20 +68,6 @@ position: relative;
     z-index: 6;
 }
 
-/* Dots styling */
-.timeline-dots {
-    margin-top: 0.5rem;
-    
-}
-
-.timeline-dot {
-    transition: all 0.3s ease;
-}
-
-.timeline-dot.active {
-    background: #7BA793 !important;
-}
-
 /* Slides styling */
 .roadmap-slides {
     margin-top: 2rem;
