@@ -78,6 +78,7 @@ position: relative;
     height: 16px; /* Same as slider track height */
     pointer-events: none;
     z-index: 5;
+    top: 22px; /* Adjust this to align with slider */
 }
 
 .timeline-marker {
@@ -85,10 +86,10 @@ position: relative;
     width: 4px;
     height: 16px; /* Slightly taller than the track */
     background: #7BA793;
-    top: 5px; /* Offset to center on track */
+    transform: translateX(-50%); /* Center the marker on its position */
 }
 
 /* Position markers */
 .timeline-marker:nth-child(1) { left: 0; }
 .timeline-marker:nth-child(2) { left: 50%; }
-.timeline-marker:nth-child(3) { left: calc(100% - 2px); }
+.timeline-marker:nth-child(3) { left: 100%; }
